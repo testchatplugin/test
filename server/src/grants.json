@@ -1,8 +1,20 @@
 [
   {
+    "role": "superAdmin",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
     "role": "user",
     "resource": "User",
     "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "superAdmin",
+    "resource": "User",
+    "action": "create:any",
     "attributes": "*"
   },
   {
@@ -12,7 +24,7 @@
     "attributes": "*"
   },
   {
-    "role": "user",
+    "role": "superAdmin",
     "resource": "User",
     "action": "update:any",
     "attributes": "*"
@@ -20,7 +32,25 @@
   {
     "role": "user",
     "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "superAdmin",
+    "resource": "User",
     "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "superAdmin",
+    "resource": "User",
+    "action": "read:any",
     "attributes": "*"
   },
   {
@@ -30,7 +60,7 @@
     "attributes": "*"
   },
   {
-    "role": "user",
+    "role": "superAdmin",
     "resource": "Product",
     "action": "read:own",
     "attributes": "*"
@@ -38,35 +68,11 @@
   {
     "role": "user",
     "resource": "Product",
-    "action": "create:any",
-    "attributes": "*"
-  },
-  {
-    "role": "user",
-    "resource": "Product",
-    "action": "update:any",
-    "attributes": "*,!isExist"
-  },
-  {
-    "role": "user",
-    "resource": "Product",
-    "action": "delete:any",
-    "attributes": "*"
-  },
-  {
-    "role": "user",
-    "resource": "Product",
-    "action": "read:any",
-    "attributes": "*"
-  },
-  {
-    "role": "user",
-    "resource": "Order",
     "action": "read:own",
     "attributes": "*"
   },
   {
-    "role": "user",
+    "role": "superAdmin",
     "resource": "Order",
     "action": "create:any",
     "attributes": "*"
@@ -74,17 +80,23 @@
   {
     "role": "user",
     "resource": "Order",
+    "action": "create:any",
+    "attributes": "*,!product,!name,!time"
+  },
+  {
+    "role": "superAdmin",
+    "resource": "Order",
     "action": "update:any",
     "attributes": "*"
   },
   {
-    "role": "user",
+    "role": "superAdmin",
     "resource": "Order",
     "action": "delete:any",
     "attributes": "*"
   },
   {
-    "role": "user",
+    "role": "superAdmin",
     "resource": "Order",
     "action": "read:any",
     "attributes": "*"
