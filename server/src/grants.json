@@ -81,7 +81,7 @@
     "role": "user",
     "resource": "Order",
     "action": "create:any",
-    "attributes": "*,!product,!name,!time"
+    "attributes": "*,!time"
   },
   {
     "role": "superAdmin",
